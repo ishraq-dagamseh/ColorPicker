@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>color pickerDisplay</title>
+
+</head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+   <p> Hello friend, You can use this color picker that allows You to choose different colors.</p>
+    Just click on the color box below and select a color you like. The selected color will be displayed in the input field below.</p>
+   <p>Click on the color box to open the color picker:</p>
+   <!--<input type="color" id="colorPicker" name="colorPicker" value="#000000">-->
+   <input name="clr" type="color" value="#000000" onchange="document.body.style.backgroundColor = this.value">
+
+    <p>Selected color:</p>
+    <input type="text" id="colorValue" value="#000000" readonly>
+
+    <script>
+        document.getElementById('colorPicker').addEventListener('input', function() {
+            document.getElementById('colorValue').value = this.value;
+        });
+    </script>
+   <!--type color provide a user interface element that lets a user specify a color,
+    either by using a visual color picker interface or by entering the color into a text field in #rrggbb hexadecimal format.-->
+    <p>Note: The color picker may not be supported in all browsers. If you don't see a color picker, try using a modern browser.</p>
+
+</body>
+</html>
